@@ -19,13 +19,13 @@ export default function EstatusSistema() {
           />
         </Box>
 
-        <Box>
+        {/* <Box>
           <DeviceLocation
             chartName={"Ubicación del Montacargas"}
             dataPath={"status-loc"}
             dataRate={2000}
           />
-        </Box>
+        </Box> */}
       </div>
       <div className="flex flex-row gap-4 w-full">
         <Box>
