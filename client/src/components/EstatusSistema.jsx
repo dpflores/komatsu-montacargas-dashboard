@@ -28,7 +28,7 @@ export default function EstatusSistema() {
         </Box> */}
       </div>
       <div className="flex flex-row gap-4 w-full">
-        <Box>
+        {/* <Box>
           <DemoGauge
             chartName={"Velocidad"}
             dataPath={"speed"}
@@ -46,7 +46,7 @@ export default function EstatusSistema() {
             gaugeUnit="Tn."
             maxValue={10}
           />
-        </Box>
+        </Box> */}
       </div>
     </div>
   );
