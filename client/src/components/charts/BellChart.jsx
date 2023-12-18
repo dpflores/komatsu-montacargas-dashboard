@@ -122,7 +122,7 @@ export default function BellChart() {
       </div>
 
       <div className="mt-3 flex flex-1 text-xs ">
-        <ResponsiveContainer>
+        <ResponsiveContainer className={"relative"}>
           <Bell
             options={bellChartOptions}
             highcharts={Highcharts}

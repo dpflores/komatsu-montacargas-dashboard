@@ -174,7 +174,7 @@ export default function HeatMapChart() {
         className="mt-3 flex flex-1 text-xs "
         style={{ backgroundImage: `url(${heatImg})` }}
       >
-        <ResponsiveContainer>
+        <ResponsiveContainer className={"relative"}>
           <Heat options={heatChartOptions} highcharts={Highcharts} />
         </ResponsiveContainer>
       </div>

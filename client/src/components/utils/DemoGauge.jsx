@@ -98,7 +98,7 @@ export default function DemoGauge({
     <div>
       <strong className="text-gray-700 font-medium">{chartName}</strong>
       <div className="mt-3 flex flex-1 text-xs">
-        <ResponsiveContainer width="100%" height="100%">
+        <ResponsiveContainer className={"relative"}>
           <Gauge {...config} chartRef={ref} />
         </ResponsiveContainer>
       </div>

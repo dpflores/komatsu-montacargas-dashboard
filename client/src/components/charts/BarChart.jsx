@@ -172,7 +172,7 @@ export default function BarChart({ chartName, dataPath, dataRate = 10000 }) {
     <Fragment>
       <strong className="text-gray-700 font-medium">{chartName}</strong>
       <div className=" mt-3 flex flex-1 text-xs ">
-        <ResponsiveContainer>
+        <ResponsiveContainer className={"relative"}>
           <Chart options={chartOptions} highcharts={Highcharts} />
         </ResponsiveContainer>
       </div>
