@@ -57,6 +57,11 @@ export default function DeviceLocation({
 }
 
 function Map({ position = [-12.142218, -76.99065] }) {
+  // Comprobar si position es un array con dos elementos
+  if (!Array.isArray(position) || position.length !== 2) {
+    position = [-12.142218, -76.99065];
+  }
+
   const iconMap = new Icon({
     iconUrl: mapIcon,
     iconSize: [30, 30],
