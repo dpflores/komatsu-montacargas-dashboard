@@ -34,17 +34,17 @@ export default function DeviceLocation({
     }
   };
 
-  // useEffect(() => {
-  //   fetchData();
+  useEffect(() => {
+    fetchData();
 
-  //   // Configurar un intervalo para ejecutar fetchData cada 500 milisegundos
-  //   const intervalId = setInterval(fetchData, dataRate);
+    // Configurar un intervalo para ejecutar fetchData cada 500 milisegundos
+    const intervalId = setInterval(fetchData, dataRate);
 
-  //   // Limpieza cuando el componente se desmonta
-  //   return () => {
-  //     clearInterval(intervalId);
-  //   };
-  // }, []);
+    // Limpieza cuando el componente se desmonta
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, []);
 
   return (
     <div className="bg-white px-4 pt-3 pb-4 rounded-sm border border-gray-200 flex-1">
@@ -69,6 +69,7 @@ function Map({ position = [-12.142218, -76.99065] }) {
   });
   return (
     <MapContainer
+      height="300px"
       center={[-12.142218, -76.99065]}
       zoom={13}
       scrollWheelZoom={true}
