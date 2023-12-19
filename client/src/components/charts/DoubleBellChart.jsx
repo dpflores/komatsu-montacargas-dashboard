@@ -231,14 +231,16 @@ export default function BellChart({ chartName, dataPath, dataRate = 10000 }) {
       </div>
 
       <div className="mt-3 flex flex-1 text-xs ">
-        <ResponsiveContainer width="100%" height="100%" className={"relative"}>
-          {isFetching && (
-            <div className="absolute flex flex-row justify-center gap-4 items-center justify-center bg-white z-50 w-full h-full bg-opacity-70">
-              Loading...
-            </div>
-          )}
+        {/* <ResponsiveContainer width="100%" height="100%" className={"relative"}> */}
+        {isFetching && (
+          <div className="absolute flex flex-row justify-center gap-4 items-center justify-center bg-white z-50 w-full h-full bg-opacity-70">
+            Loading...
+          </div>
+        )}
+        <div style={{ width: "100%", height: "100%" }}>
           <Bell options={ChartOptions} highcharts={Highcharts} />
-        </ResponsiveContainer>
+        </div>
+        {/* </ResponsiveContainer> */}
       </div>
 
       <div className="flex flex-row justify-center gap-4">

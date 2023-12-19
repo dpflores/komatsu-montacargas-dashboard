@@ -85,7 +85,8 @@ export default function DemoGauge({
     },
     statistic: {
       content: {
-        formatter: ({ percent }) => `${percent * maxValue} ${gaugeUnit}`,
+        formatter: ({ percent }) =>
+          `${(percent * maxValue).toFixed(2)} ${gaugeUnit}`,
         style: {
           fontSize: 25,
           lineHeight: 1,

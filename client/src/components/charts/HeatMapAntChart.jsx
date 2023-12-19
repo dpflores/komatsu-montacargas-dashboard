@@ -134,14 +134,16 @@ export default function HeatMapAntChart({
     <div>
       <strong className="text-gray-700 font-medium">{chartName}</strong>
       <div className="mt-3 flex flex-1 text-xs">
-        <ResponsiveContainer width="100%" height="100%" className={"relative"}>
-          {isFetching && (
-            <div className="absolute flex flex-row justify-center gap-4 items-center justify-center bg-white z-50 w-full h-full bg-opacity-70">
-              Loading...
-            </div>
-          )}
+        {/* <ResponsiveContainer width="100%" height="100%" className={"relative"}> */}
+        {isFetching && (
+          <div className="absolute flex flex-row justify-center gap-4 items-center justify-center bg-white z-50 w-full h-full bg-opacity-70">
+            Loading...
+          </div>
+        )}
+        <div style={{ width: "100%", height: "100%" }}>
           <DemoHeatmap />
-        </ResponsiveContainer>
+        </div>
+        {/* </ResponsiveContainer> */}
       </div>
 
       <FilterDates

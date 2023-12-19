@@ -177,14 +177,16 @@ export default function FrenquencyChart({ dataPath, chartName, dataRate }) {
       {/* // <div className="bg-white p-4 rounded-sm border border-solid border-gray-200 flex flex-col flex-1"> */}
       <strong className="text-gray-700 font-medium">{chartName}</strong>
       <div className="overflow:hidden w-full h-full ">
-        <ResponsiveContainer width="100%" height="100%" className={"relative"}>
-          {isFetching && (
-            <div className="absolute flex flex-row justify-center gap-4 items-center justify-center bg-white z-50 w-full h-full bg-opacity-70">
-              Loading...
-            </div>
-          )}
+        {/* <ResponsiveContainer width="100%" height="100%" className={"relative"}> */}
+        {isFetching && (
+          <div className="absolute flex flex-row justify-center gap-4 items-center justify-center bg-white z-50 w-full h-full bg-opacity-70">
+            Loading...
+          </div>
+        )}
+        <div style={{ width: "100%", height: "100%" }}>
           <PlotlyChart data={data_chart} />
-        </ResponsiveContainer>
+        </div>
+        {/* </ResponsiveContainer> */}
       </div>
 
       <div className="flex flex-row justify-center gap-4">
