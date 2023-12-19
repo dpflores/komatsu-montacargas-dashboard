@@ -11,13 +11,13 @@ export default function EstatusSistema() {
     <div className="flex flex-col gap-4 px-4 py-4 ">
       <div className="flex flex-row gap-4 w-full">
         {/* <Box flex={2}> */}
-        <Box flex={3}>
+        {/* <Box flex={3}>
           <DeviceDescription
             chartName={"Descripción del sistema"}
             dataPath={"status-desc"}
             dataRate={5000}
           />
-        </Box>
+        </Box> */}
 
         <Box>
           <DeviceLocation
