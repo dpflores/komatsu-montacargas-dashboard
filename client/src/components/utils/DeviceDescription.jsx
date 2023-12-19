@@ -91,8 +91,11 @@ export default function Description({ chartName, dataPath, dataRate = 10000 }) {
 }
 
 export function Hourmeter({ dataPath, dataRate = 1000 }) {
-  const [minutes, setMinutes] = useLocalStorage(`${dataPath}`, 0);
-  const [hours, setHours] = useLocalStorage(`${dataPath}2`, 0);
+  // const [minutes, setMinutes] = useLocalStorage(`${dataPath}`, 0);
+  // const [hours, setHours] = useLocalStorage(`${dataPath}2`, 0);
+
+  const [minutes, setMinutes] = useState(0);
+  const [hours, setHours] = useState(0);
 
   useEffect(() => {
     const fetchData = () => {
