@@ -19,6 +19,7 @@ export default function Description({ chartName, dataPath, dataRate = 10000 }) {
         })
         .catch((err) => {
           console.log(err.message);
+          setStatus(false); // Valor por defecto
           isFetching = false;
         });
     }
@@ -103,6 +104,8 @@ export function Hourmeter({ dataPath, dataRate = 1000 }) {
         })
         .catch((err) => {
           console.log(err.message);
+          setMinutes(0); // Valor por defecto
+          setHours(0); // Valor por defecto
         });
     };
     // Ejecutar fetchData inicialmente

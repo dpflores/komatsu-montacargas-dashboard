@@ -69,7 +69,6 @@ function Map({ position = [-12.142218, -76.99065] }) {
   });
   return (
     <MapContainer
-      height="300px"
       center={[-12.142218, -76.99065]}
       zoom={13}
       scrollWheelZoom={true}
