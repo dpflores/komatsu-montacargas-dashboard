@@ -82,7 +82,7 @@ export default function Description({ chartName, dataPath, dataRate = 10000 }) {
         <div className="flex flex-row my-5">
           <div className="flex flex-1 mr-10">Horómetro: </div>
           <div className="flex flex-1 text-komatsu-blue text-xl">
-            <Hourmeter dataRate={60000} dataPath={"hourmeter"} />
+            {/* <Hourmeter dataRate={60000} dataPath={"hourmeter"} /> */}
           </div>
         </div>
       </div>
