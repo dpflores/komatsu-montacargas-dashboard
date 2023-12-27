@@ -108,7 +108,7 @@ export default function RealTimeChart({
     series: [
       {
         animation: false,
-        name: "Grúa 1",
+        name: "Corriente",
         color: "#66CC00",
         // showCheckbox: true,
         data: data1,
@@ -118,12 +118,12 @@ export default function RealTimeChart({
           valueDecimals: 2,
           pointFormat:
             '<span style="color:{point.color}">\u25CF</span> ' +
-            "{series.name}: <b>{point.y}m</b><br/>",
+            "{series.name}: <b>{point.y}mA</b><br/>",
         },
       },
       {
         animation: false,
-        name: "Grúa 2",
+        name: "Velocidad",
         color: "#FF9933",
         // showCheckbox: true,
         data: data2,
@@ -134,7 +134,7 @@ export default function RealTimeChart({
           animation: false,
           pointFormat:
             '<span style="color:{point.color}">\u25CF</span> ' +
-            "{series.name}: <b>{point.y}m</b><br/>",
+            "{series.name}: <b>{point.y}km/h</b><br/>",
         },
       },
     ],
@@ -172,8 +172,7 @@ export default function RealTimeChart({
     },
 
     yAxis: {
-      title: { text: "Altura (m)", align: "middle", rotation: 90, offset: 20 },
-
+      // title: { text: "Altura (m)", align: "middle", rotation: 90, offset: 20 },
       // title: {
       //   text: 'm',
       //   align: 'high',
